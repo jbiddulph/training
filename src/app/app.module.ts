@@ -18,6 +18,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { MatProgressSpinnerModule } from '@angular/material';
 import { StopTrainingComponent } from './training/current/stop-training.component';
 import { AuthService } from './auth/auth.service';
+import {TrainingService} from './training/training.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { AuthService } from './auth/auth.service';
     ReactiveFormsModule,
     MatProgressSpinnerModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
 })
