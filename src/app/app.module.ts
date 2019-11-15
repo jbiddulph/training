@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { MaterialModule } from './material.module';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -19,6 +21,7 @@ import { MatProgressSpinnerModule } from '@angular/material';
 import { StopTrainingComponent } from './training/current/stop-training.component';
 import { AuthService } from './auth/auth.service';
 import {TrainingService} from './training/training.service';
+import {environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import {TrainingService} from './training/training.service';
     FlexLayoutModule,
     FormsModule,
     ReactiveFormsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [AuthService, TrainingService],
   bootstrap: [AppComponent],

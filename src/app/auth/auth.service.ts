@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from './user.model';
 import { AuthData } from './auth-data.model';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 
 @Injectable()
